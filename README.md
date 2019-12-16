@@ -3,7 +3,7 @@ Just a simple project file checker to make sure all your files are yours!
 
 This is a simple grep-using script meant to verify in all files that contain a 42 Header in your project, that they all belong to the author of the project.
 
-This script was made for personal use and is a rudimentary (but functional!) implementation of file checking, feel free to use it, copy it, and/or improve it; BUT please let me know if you do improve it, so I can learn from your experience and make better file checkers in the future. You can also contact me if you have any questions or suggestions.
+This script was made for personal use and is a rudimentary (but functional!) implementation of author file checking, feel free to use it, copy it, and/or improve it; BUT **please let me know if you do improve it**, so I can learn from your experience and make better file checkers in the future. You can also contact me if you have any questions or suggestions.
 You can email me at sydjbrl@gmail.com, or on slack @dsy in 42_Paris.
 
 **VARIABLES**
