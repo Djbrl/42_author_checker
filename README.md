@@ -1,5 +1,6 @@
 # 42_author_checker
 **EDITS LOG**
+
 18-12-2019 : [New Function] you can now add an author directly as an argument for the script.
 
 **SUMMARY**
