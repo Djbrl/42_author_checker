@@ -16,13 +16,24 @@ LOG=LOGFILE_author_checker.txt
 
 echo "${GRN}42 AUTHOR CHECKER${NC}\n"
 
-if [ -f "$FILE" ];
+if [ -n "$1" ]
+then
+	author=$1
+fi
+
+echo $author
+if [ -f "$FILE" ] || [ -n "$1" ];
 then
 	if [ -f "${PRJ}LOGFILE_author_checker.txt" ];
 	then
 		rm ${PRJ}$LOG
 	fi
-	author=`cat $FILE`
+
+	if [ -f "$FILE" ]
+	then
+		author=`cat $FILE`
+	fi
+	
 	echo "author file found ! this is $GRN$author$NC's project. Let's check files :"
 	LINE1=`grep -R ":..:[0-9][0-9] by [a-z]\|By: [a-z]" ${PRJ}* | wc -l`
 	LINE2=`grep -R ":..:[0-9][0-9] by ${author}\|By: ${author}" ${PRJ}* | wc -l`
