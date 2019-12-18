@@ -21,7 +21,6 @@ then
 	author=$1
 fi
 
-echo $author
 if [ -f "$FILE" ] || [ -n "$1" ];
 then
 	if [ -f "${PRJ}LOGFILE_author_checker.txt" ];
@@ -34,7 +33,7 @@ then
 		author=`cat $FILE`
 	fi
 	
-	echo "author file found ! this is $GRN$author$NC's project. Let's check files :"
+	echo "author found ! this is $GRN$author$NC's project. Let's check files :"
 	LINE1=`grep -R ":..:[0-9][0-9] by [a-z]\|By: [a-z]" ${PRJ}* | wc -l`
 	LINE2=`grep -R ":..:[0-9][0-9] by ${author}\|By: ${author}" ${PRJ}* | wc -l`
 	grep -R ":..:[0-9][0-9] by [a-z]..[a-z]\|By: [a-z][a-z]" ${PRJ}* > $LOG
