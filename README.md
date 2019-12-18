@@ -1,4 +1,9 @@
 # 42_author_checker
+**EDITS LOG**
+18-12-2019 : [New Function] you can now add an author directly as an argument for the script.
+
+**SUMMARY**
+
 Just a simple project file checker to make sure all your files are yours!
 
 This is a simple grep-using script meant to verify that all files that contain a 42 Header in your project, belong (by, created and last updated) to the author of the project.
