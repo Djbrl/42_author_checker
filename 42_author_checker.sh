@@ -37,7 +37,7 @@ then
 	
 	LINE1=`grep -R ":..:[0-9][0-9] by [a-z]\|By: [a-z]" ${PRJ}* | wc -l`
 	LINE2=`grep -R ":..:[0-9][0-9] by ${author}\|By: ${author}" ${PRJ}* | wc -l`
-	grep -R ":..:[0-9][0-9] by [a-z]..[a-z]\|By: [a-z][a-z]" ${PRJ}* > $LOG
+	grep -R --exclude='*.txt' ":..:[0-9][0-9] by [a-z]..[a-z]\|By: [a-z][a-z]" ${PRJ}* > $LOG
 	if [ $LINE1 != $LINE2 ];
 	then
 		echo "${RED}FAIL${NC}, some files aren't yours. You can find grep results in the ${YLW}logfile${NC}."
