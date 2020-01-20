@@ -24,11 +24,11 @@ fi
 
 if [ -f "$FILE" ] || [ -n "$1" ];
 then
-	if [ -f "${PRJ}LOGFILE_author_checker.txt" ];
+	if [ -f "${PRJ}$LOG" ];
 	then
 		rm ${PRJ}$LOG
 	fi
-
+	ls
 	if [ -f "$FILE" ]
 	then
 		author=`cat $FILE`
